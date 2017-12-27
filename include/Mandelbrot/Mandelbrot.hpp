@@ -28,7 +28,6 @@ private:
 public:
     // constructors
     Mandelbrot(size_t width, size_t height, ComplexNumber &xSet, ComplexNumber &ySet, size_t iterations, size_t colorPaletteSize);
-    Mandelbrot(size_t width, size_t height, ComplexNumber &pointOfInterest, double zoom, size_t iterations, size_t colorPaletteSize);
     Mandelbrot();
 
     // destructors

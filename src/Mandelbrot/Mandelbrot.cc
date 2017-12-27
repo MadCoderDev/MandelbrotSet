@@ -23,28 +23,6 @@ Mandelbrot::Mandelbrot(size_t width, size_t height, ComplexNumber &xSet, Complex
     this->image.create(width, height, Color::Black);
 }
 
-Mandelbrot::Mandelbrot(size_t width, size_t height, ComplexNumber &pointOfInterest, double zoom, size_t iterations, size_t colorPaletteSize)
-{
-
-
-    this->width = width;
-    this->height = height;
-    //this->xScale = xSet;
-    //this->yScale = ySet;
-    this->iterations = iterations;
-
-    for(size_t i = 0; i < colorPaletteSize; i++)
-    {
-        double h = this->Map(i, 0, colorPaletteSize, 0, 360);
-        double s = this->Map(i, 0, colorPaletteSize, 1, 0);
-        double v = this->Map(i, 0, colorPaletteSize, 0, 1);
-
-        this->colorPalette.push_back(this->HsvToRgb(h, s, v));
-    }
-
-    this->image.create(width, height, Color::Black);
-}
-
 Mandelbrot::Mandelbrot()
 {
     this->width = 640;
